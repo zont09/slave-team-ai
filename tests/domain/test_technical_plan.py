@@ -148,3 +148,17 @@ def test_technical_plan_instances_have_independent_lists() -> None:
 
     assert first_plan.open_questions == ["Only first plan"]
     assert second_plan.open_questions == []
+
+def test_create_implementation_step_with_acceptance_criteria() -> None:
+    step = ImplementationStep(
+        step_id="STEP-001",
+        title="Implement login service",
+        description="Validate credentials and create access token.",
+        component=ComponentType.BACKEND,
+        related_acceptance_criteria=["AC-001", "AC-002"],
+    )
+
+    assert step.related_acceptance_criteria == [
+        "AC-001",
+        "AC-002",
+    ]

@@ -93,6 +93,11 @@ class ImplementationStep(DomainModel):
         description="Danh sách criterion_id mà bước này hỗ trợ.",
     )
 
+    related_acceptance_criteria: list[str] = Field(
+        default_factory=list,
+        description="Các acceptance criterion mà bước này triển khai.",
+    )
+
 
 class ApiChange(DomainModel):
     """Một thay đổi dự kiến đối với API contract."""
@@ -171,6 +176,13 @@ class TestPlanItem(DomainModel):
     acceptance_criteria: list[str] = Field(
         default_factory=list,
         description="Acceptance criteria được kiểm chứng bởi test.",
+    )
+
+    related_acceptance_criteria: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Acceptance criteria được kiểm chứng bởi test này."
+        ),
     )
 
 
