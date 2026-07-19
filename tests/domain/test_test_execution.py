@@ -226,6 +226,7 @@ def test_reject_duplicate_acceptance_criterion_results() -> None:
                 AcceptanceCriterionResult(
                     criterion_id="AC-001",
                     status=AcceptanceStatus.PASSED,
+                    evidence=["TEST-001"],
                 ),
                 AcceptanceCriterionResult(
                     criterion_id="AC-001",

@@ -35,6 +35,15 @@ from software_team.domain.test_execution import (
     TestFailure,
 )
 
+from software_team.domain.review import (
+    FindingStatus,
+    ReviewCategory,
+    ReviewDecision,
+    ReviewFinding,
+    ReviewResult,
+    ReviewSeverity,
+)
+
 __all__ = [
     "AcceptanceCriterion",
     "AcceptanceCriterionResult",
@@ -50,10 +59,16 @@ __all__ = [
     "CoverageSummary",
     "DatabaseChange",
     "FileChange",
+    "FindingStatus",
     "ImplementationIssue",
     "ImplementationStep",
     "IssueSeverity",
     "RequirementSpec",
+    "ReviewCategory",
+    "ReviewDecision",
+    "ReviewFinding",
+    "ReviewResult",
+    "ReviewSeverity",
     "TechnicalPlan",
     "TechnicalRisk",
     "TestCaseResult",
