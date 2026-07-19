@@ -24,8 +24,21 @@ from software_team.domain.code_change import (
     IssueSeverity,
 )
 
+from software_team.domain.test_execution import (
+    AcceptanceCriterionResult,
+    AcceptanceStatus,
+    CoverageSummary,
+    TestCaseResult,
+    TestCaseStatus,
+    TestExecutionResult,
+    TestExecutionStatus,
+    TestFailure,
+)
+
 __all__ = [
     "AcceptanceCriterion",
+    "AcceptanceCriterionResult",
+    "AcceptanceStatus",
     "ApiChange",
     "ChangeType",
     "CodeChangeResult",
@@ -34,6 +47,7 @@ __all__ = [
     "CommandStatus",
     "ComponentChange",
     "ComponentType",
+    "CoverageSummary",
     "DatabaseChange",
     "FileChange",
     "ImplementationIssue",
@@ -42,5 +56,10 @@ __all__ = [
     "RequirementSpec",
     "TechnicalPlan",
     "TechnicalRisk",
+    "TestCaseResult",
+    "TestCaseStatus",
+    "TestExecutionResult",
+    "TestExecutionStatus",
+    "TestFailure",
     "TestPlanItem",
 ]
